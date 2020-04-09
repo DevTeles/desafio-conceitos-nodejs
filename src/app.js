@@ -83,7 +83,7 @@ app.post("/repositories/:id/like", validateRepositorioId, (request, response) =>
 
   repositories[repoIndex].likes += 1;
 
-  return response.json(repositories[repoIndex].likes);
+  return response.json({ likes: repositories[repoIndex].likes });
 });
 
 module.exports = app;
